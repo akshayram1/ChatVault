@@ -5,6 +5,17 @@ struct MenuBarView: View {
     @ObservedObject var model: AppModel
 
     var body: some View {
+        Group {
+            if model.showPermissions {
+                PermissionsView(model: model)
+            } else {
+                browser
+            }
+        }
+        .frame(width: 420, height: 560)
+    }
+
+    private var browser: some View {
         VStack(spacing: 0) {
             header
             Divider()
@@ -33,10 +44,6 @@ struct MenuBarView: View {
                 Divider()
             }
             footer
-        }
-        .frame(width: 420, height: 560)
-        .sheet(isPresented: $model.showPermissions) {
-            PermissionsView(model: model)
         }
         .onChange(of: model.includeSubagents) { _, _ in
             Task { await model.scan() }

@@ -18,6 +18,7 @@ struct PermissionsView: View {
                     model.access.requestAccess(for: kind)
                 }
             }
+            Spacer(minLength: 0)
             HStack {
                 Button("Select Home folder…") { model.access.requestHomeFolderAccess() }
                 Button("Full Disk Access…") { model.access.openFullDiskAccessSettings() }
@@ -27,9 +28,10 @@ struct PermissionsView: View {
                     Task { await model.scan() }
                 }
             }
+            .controlSize(.small)
         }
-        .padding(24)
-        .frame(minWidth: 480)
+        .padding(16)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 

@@ -1,13 +1,7 @@
 # ChatVault
 
 <p align="center">
-  <img src="assets/brag.jpg" alt="ChatVault" width="720">
-</p>
-
-<p align="center">
-  <video src="https://github.com/akshayram1/ChatVault/raw/main/assets/brag.mp4" controls width="720">
-    Your browser can't play this video. <a href="https://github.com/akshayram1/ChatVault/raw/main/assets/brag.mp4">Download it here</a>.
-  </video>
+  <img src="assets/brag.gif" alt="ChatVault demo" width="720">
 </p>
 
 <p align="center">
