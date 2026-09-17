@@ -1,5 +1,13 @@
 # ChatVault
 
+<p align="center">
+  <img src="assets/brag.jpg" alt="ChatVault" width="720">
+</p>
+
+<p align="center">
+  <a href="https://github.com/akshayram1/ChatVault/raw/main/assets/brag.mp4">▶ Watch the demo</a>
+</p>
+
 A small Mac app that finds Cursor, Claude Code, and Codex chats already stored on this Mac. Search by name, sort by date, grep a jsonl, copy the path. Nothing is uploaded.
 
 It works on any Mac. Paths are built from that user’s Home folder. If a tool is not installed, that source is skipped.
