@@ -29,12 +29,10 @@ final class AppModel: ObservableObject {
         access.grantConsent()
         let isFirstLaunch = !UserDefaults.standard.bool(forKey: hasLaunchedKey)
         UserDefaults.standard.set(true, forKey: hasLaunchedKey)
-        Task {
-            await scan()
-            if isFirstLaunch || !blockedFolders.isEmpty {
-                showPermissions = true
-            }
+        if isFirstLaunch {
+            showPermissions = true
         }
+        Task { await scan() }
     }
 
     var selected: ChatSession? {
