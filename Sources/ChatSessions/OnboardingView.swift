@@ -5,7 +5,12 @@ struct PermissionsView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text("Folder access").font(.title2.bold())
+            HStack {
+                Text("Folder access").font(.title2.bold())
+                Spacer()
+                Button("Done") { model.showPermissions = false }
+                    .keyboardShortcut(.defaultAction)
+            }
             Text("Chat Sessions only reads files already on this Mac. If a tool is not installed, that row stays unused.")
                 .foregroundStyle(.secondary)
             ForEach(AccessKind.allCases) { kind in
