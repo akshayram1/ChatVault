@@ -1,10 +1,24 @@
-# Chat Sessions
+# ChatVault
 
 A small Mac app that finds Cursor, Claude Code, and Codex chats already stored on this Mac. Search by name, sort by date, grep a jsonl, copy the path. Nothing is uploaded.
 
 It works on any Mac. Paths are built from that user’s Home folder. If a tool is not installed, that source is skipped.
 
-## Build
+## Install
+
+One command, no need to clone this repo. Downloads the latest release, installs it to `~/Applications`, and launches it:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/akshayram1/ChatVault/main/scripts/remote-install.sh | bash
+```
+
+## Uninstall
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/akshayram1/ChatVault/main/scripts/uninstall.sh | bash
+```
+
+## Build from source
 
 Needs macOS 14+ and Xcode Command Line Tools.
 
@@ -14,7 +28,7 @@ chmod +x scripts/build-app.sh
 open dist/ChatSessions.app
 ```
 
-Drag `dist/ChatSessions.app` to `/Applications` if you want it in Launchpad.
+Or run `./scripts/install.sh` after cloning to build and install to `~/Applications` in one step.
 
 First launch is unsigned (ad-hoc). Right-click → Open the first time, or System Settings → Privacy & Security.
 
