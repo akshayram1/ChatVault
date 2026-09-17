@@ -55,7 +55,7 @@ struct ContentView: View {
                 .disabled(model.isScanning)
             }
         }
-        .navigationTitle("Chat Sessions")
+        .navigationTitle("ChatVault")
         .safeAreaInset(edge: .bottom) {
             HStack {
                 if model.isScanning {

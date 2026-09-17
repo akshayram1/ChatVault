@@ -5,15 +5,15 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>ChatSessions</string>
+	<string>ChatVault</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.chatsessions.app</string>
+	<string>com.chatvault.app</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Chat Sessions</string>
+	<string>ChatVault</string>
 	<key>CFBundleDisplayName</key>
-	<string>Chat Sessions</string>
+	<string>ChatVault</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -33,12 +33,12 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSDocumentsFolderUsageDescription</key>
-	<string>Chat Sessions reads local Cursor, Claude Code, and Codex chat files on this Mac so you can search them. Nothing is uploaded.</string>
+	<string>ChatVault reads local Cursor, Claude Code, and Codex chat files on this Mac so you can search them. Nothing is uploaded.</string>
 	<key>NSDesktopFolderUsageDescription</key>
-	<string>Chat Sessions only needs this if you store projects on the Desktop.</string>
+	<string>ChatVault only needs this if you store projects on the Desktop.</string>
 	<key>NSDownloadsFolderUsageDescription</key>
-	<string>Chat Sessions only needs this if you store projects in Downloads.</string>
+	<string>ChatVault only needs this if you store projects in Downloads.</string>
 	<key>NSFileProviderPresenceUsageDescription</key>
-	<string>Chat Sessions reads local chat transcripts already saved by other apps.</string>
+	<string>ChatVault reads local chat transcripts already saved by other apps.</string>
 </dict>
 </plist>

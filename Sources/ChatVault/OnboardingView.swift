@@ -11,7 +11,7 @@ struct PermissionsView: View {
                 Button("Done") { model.showPermissions = false }
                     .keyboardShortcut(.defaultAction)
             }
-            Text("Chat Sessions only reads files already on this Mac. If a tool is not installed, that row stays unused.")
+            Text("ChatVault only reads files already on this Mac. If a tool is not installed, that row stays unused.")
                 .foregroundStyle(.secondary)
             ForEach(AccessKind.allCases) { kind in
                 AccessRow(kind: kind, status: model.access.status[kind] ?? .denied) {

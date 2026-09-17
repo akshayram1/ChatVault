@@ -12,15 +12,15 @@ swiftc -parse-as-library \
   -framework SwiftUI \
   -framework AppKit \
   -lsqlite3 \
-  -o "$BIN_DIR/ChatSessions" \
-  Sources/ChatSessions/*.swift
-APP="$ROOT/dist/ChatSessions.app"
+  -o "$BIN_DIR/ChatVault" \
+  Sources/ChatVault/*.swift
+APP="$ROOT/dist/ChatVault.app"
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
-cp "$BIN_DIR/ChatSessions" "$APP/Contents/MacOS/ChatSessions"
+cp "$BIN_DIR/ChatVault" "$APP/Contents/MacOS/ChatVault"
 cp "$ROOT/macos/Info.plist" "$APP/Contents/Info.plist"
 printf 'APPL????' > "$APP/Contents/PkgInfo"
-chmod +x "$APP/Contents/MacOS/ChatSessions"
+chmod +x "$APP/Contents/MacOS/ChatVault"
 if command -v codesign >/dev/null; then
   codesign --force --sign - "$APP" >/dev/null
 fi

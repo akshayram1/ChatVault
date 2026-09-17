@@ -22,7 +22,7 @@ final class AppModel: ObservableObject {
     }
 
     private let relative = RelativeDateTimeFormatter()
-    private let hasLaunchedKey = "chatSessions.hasLaunchedBefore"
+    private let hasLaunchedKey = "chatVault.hasLaunchedBefore"
 
     init() {
         relative.unitsStyle = .abbreviated

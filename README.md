@@ -33,7 +33,7 @@ Needs macOS 14+ and Xcode Command Line Tools.
 ```bash
 chmod +x scripts/build-app.sh
 ./scripts/build-app.sh
-open dist/ChatSessions.app
+open dist/ChatVault.app
 ```
 
 Or run `./scripts/install.sh` after cloning to build and install to `~/Applications` in one step.

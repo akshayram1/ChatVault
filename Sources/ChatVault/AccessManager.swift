@@ -7,13 +7,13 @@ final class AccessManager: ObservableObject {
     @Published var lastError: String?
 
     private let defaults = UserDefaults.standard
-    private let consentKey = "chatSessions.consented"
+    private let consentKey = "chatVault.consented"
     private var bookmarkKeys: [AccessKind: String] {
         [
-            .cursor: "chatSessions.bookmark.cursor",
-            .cursorDB: "chatSessions.bookmark.cursorDB",
-            .claude: "chatSessions.bookmark.claude",
-            .codex: "chatSessions.bookmark.codex",
+            .cursor: "chatVault.bookmark.cursor",
+            .cursorDB: "chatVault.bookmark.cursorDB",
+            .claude: "chatVault.bookmark.claude",
+            .codex: "chatVault.bookmark.codex",
         ]
     }
 
@@ -82,7 +82,7 @@ final class AccessManager: ObservableObject {
         panel.allowsMultipleSelection = false
         panel.canCreateDirectories = false
         panel.directoryURL = kind == .cursorDB ? starting.deletingLastPathComponent() : starting
-        panel.message = "Allow Chat Sessions to read \(kind.title). Files stay on this Mac."
+        panel.message = "Allow ChatVault to read \(kind.title). Files stay on this Mac."
         panel.prompt = "Grant Access"
         panel.title = "Grant \(kind.title)"
         guard panel.runModal() == .OK, let picked = panel.url else { return }
@@ -96,7 +96,7 @@ final class AccessManager: ObservableObject {
         panel.canChooseFiles = false
         panel.allowsMultipleSelection = false
         panel.directoryURL = FileManager.default.homeDirectoryForCurrentUser
-        panel.message = "Select your Home folder so Chat Sessions can read Cursor, Claude Code, and Codex chats already stored on this Mac."
+        panel.message = "Select your Home folder so ChatVault can read Cursor, Claude Code, and Codex chats already stored on this Mac."
         panel.prompt = "Grant Access"
         panel.title = "Allow access to Home"
         guard panel.runModal() == .OK, let home = panel.url else { return }
